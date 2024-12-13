@@ -1,10 +1,20 @@
-## things to figure out
+## things to figure out ----------------------------------
 
 * who does what?
+    nikki - (implement objects, build the garden, press buttons) kanske
+    Theo - modelling, interaction
+    willy - 
 * what language?
+    three.js   - maybe (cannon.js & ammo.js & babylon)
+    webxr
+    javascript + html + css (maybe)
+
 * how busy are people? what do you have besides this?
+
 * scrum? (when do we meet?)
+
 * should we set up some sort of schedule?
+
 * who wants the vr goggles?
 
 
@@ -31,8 +41,9 @@
 
 
 * physics, objects dropping down when you let them go 
-    (check cannon.js & ammo.js, would it be difficult to implement?)
+    (check cannon.js & ammo.js & babylon, would it be difficult to implement?)
     
+    collision detection
     jumping? 
     shooting things out of an object?
 
