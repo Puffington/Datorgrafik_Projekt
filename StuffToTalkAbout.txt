@@ -1,0 +1,55 @@
+## things to figure out
+
+* who does what?
+* what language?
+* how busy are people? what do you have besides this?
+* scrum? (when do we meet?)
+* should we set up some sort of schedule?
+* who wants the vr goggles?
+
+
+## Minimum implementation requirement (should) -----------------------------
+
+* have a room
+    have objects in the room (rocks, plants, tree?)
+    implement textures and colours for 
+
+* Light up the room
+    implement shadows
+    raytrace or rasterize?
+
+* be able to move around the room
+
+
+
+* pick stuff up?  (vr implementation)
+* rotate head to look around (vr implementation)
+    read up on webxr
+
+
+## things that might be nice to have (could) -------------------------------------
+
+
+* physics, objects dropping down when you let them go 
+    (check cannon.js & ammo.js, would it be difficult to implement?)
+    
+    jumping? 
+    shooting things out of an object?
+
+* a squirrel with a paintball gun
+* Roger and Emin's heads 
+
+* shoot a ray, (from hand or item) and change color or size of object
+
+
+## ideas (just some brainstorm parts) -----------------------------------
+
+* beam that inverts the depth buffer and thus shows the inside of an object. (maybe hide somethings inside?)
+
+* corridor with a "mirror  by the end" if you look at it for too long create something behind the player.
+
+* a giant in the sky looking at you (just as a cool thing)
+
+
+
+
