@@ -10,13 +10,23 @@
     javascript + html + css (maybe)
 
 * how busy are people? what do you have besides this?
+    Theo - ai till på fredag
+    Nikki - små uppgifter tills på torsdag, nätverks LABB till JUL!!
+    Willy - labb2, AI project till på fredag
 
-* scrum? (when do we meet?)
+* high intensive timeslots
+    3-5 jan
+    otherwise when you have time
 
-* should we set up some sort of schedule?
+* should we set up some sort of schedule?    - 10 jan - presentation
 
 * who wants the vr goggles?
+    nikki is the holder
 
+* homework
+    understand the current 3js code
+    read up on 3js (checkout the video above)
+    learn how to implement webxr
 
 ## Minimum implementation requirement (should) -----------------------------
 
@@ -30,12 +40,11 @@
 
 * be able to move around the room
 
-
+* THREE.interactive - 
 
 * pick stuff up?  (vr implementation)
 * rotate head to look around (vr implementation)
     read up on webxr
-
 
 ## things that might be nice to have (could) -------------------------------------
 
