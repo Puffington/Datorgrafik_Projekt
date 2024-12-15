@@ -1,0 +1,11 @@
+Model Information:
+* title:	RIVERWOOD_TREE
+* source:	https://sketchfab.com/3d-models/riverwood-tree-abb9631634314060bcd1a2db1a176bd1
+* author:	Uncanny Bichilling (https://sketchfab.com/RokoSama)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "RIVERWOOD_TREE" (https://sketchfab.com/3d-models/riverwood-tree-abb9631634314060bcd1a2db1a176bd1) by Uncanny Bichilling (https://sketchfab.com/RokoSama) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

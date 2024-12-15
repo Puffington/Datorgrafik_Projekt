@@ -33,20 +33,34 @@ cube1.position.set(-5, 0, 0);
 scene.add(cube1);
 
 
-var rock = new THREE.Object3D();
-
 //trying to load a rock <- theo
-const loader = new GLTFLoader(); 
-loader.load( '/addons/rock/scene.gltf', function ( gltf ) { 
-  rock = gltf.scene
-  rock.position.set(0,-3,0);
-  rock.scale.set(0.3,0.3,0.3);
-  scene.add(gltf.scene);
-  //gltf.animations; //could be added here???
-},
- undefined,
-  function ( error ) { console.error( error ); } ); //if error loading the rock
- 
+
+function load(path, n, pos){
+  var rocks = [];
+  for (let i = 0; i < n; i++) {
+    rocks.push(new THREE.Object3D());
+  }
+
+  rocks.forEach(rock => {
+    const loader = new GLTFLoader(); 
+    loader.load( path, function ( gltf ) { 
+    rock = gltf.scene
+    rock.position.set(pos[0],pos[1],pos[2]);
+    pos[0]++
+    pos[1]--
+    pos[2]++
+    rock.scale.set(0.009,0.009,0.009);
+    scene.add(gltf.scene);
+    //gltf.animations; //could be added here???
+  },
+   undefined,
+    function ( error ) { console.error( error ); } ); //if error loading the rock
+  });
+
+}
+
+const tree = '/addons/tree2/maple_tree/scene.gltf';
+var test = load(tree, 6, [0,1,-3]);
 
 // Add a light source to the scene
 const light = new THREE.DirectionalLight(0xffffff, 1);
@@ -71,9 +85,9 @@ function animate() {
     cube.position.x -= 0.01;
     cube1.position.x += 0.05;
 
-    rock.position.x += 0.01;
-    rock.position.y += 0.01;
-    rock.rotation.x += 0.001;
+    //rock.position.x += 0.01;
+    //rock.position.y += 0.01;
+    //rock.rotation.x += 0.001;
 
     // Check for collision and change color
     if (cube1.position.x > cube.position.x) {
