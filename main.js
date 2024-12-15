@@ -33,10 +33,12 @@ cube1.position.set(-5, 0, 0);
 scene.add(cube1);
 
 
+var rock = new THREE.Object3D();
+
 //trying to load a rock <- theo
 const loader = new GLTFLoader(); 
 loader.load( '/addons/rock/scene.gltf', function ( gltf ) { 
-  let rock = gltf.scene
+  rock = gltf.scene
   rock.position.set(0,-3,0);
   rock.scale.set(0.3,0.3,0.3);
   scene.add(gltf.scene);
@@ -44,8 +46,8 @@ loader.load( '/addons/rock/scene.gltf', function ( gltf ) {
 },
  undefined,
   function ( error ) { console.error( error ); } ); //if error loading the rock
-
  
+
 // Add a light source to the scene
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(5, 5, 5).normalize();
@@ -68,6 +70,10 @@ function animate() {
     cube.rotation.y += 0.01;
     cube.position.x -= 0.01;
     cube1.position.x += 0.05;
+
+    rock.position.x += 0.01;
+    rock.position.y += 0.01;
+    rock.rotation.x += 0.001;
 
     // Check for collision and change color
     if (cube1.position.x > cube.position.x) {
