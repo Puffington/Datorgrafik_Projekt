@@ -1,6 +1,11 @@
 // Import the necessary Three.js components
 import * as THREE from '/node_modules/three/build/three.module.js';
 
+// to be able to load a sspecific type of object, you have to import a loader
+import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+
+//import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/loaders/GLTFLoader.js';
+
 // Initialize the scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -27,6 +32,20 @@ const cube1 = new THREE.Mesh(geometry1, material1);
 cube1.position.set(-5, 0, 0);
 scene.add(cube1);
 
+
+//trying to load a rock <- theo
+const loader = new GLTFLoader(); 
+loader.load( '/addons/rock/scene.gltf', function ( gltf ) { 
+  let rock = gltf.scene
+  rock.position.set(0,-3,0);
+  rock.scale.set(0.3,0.3,0.3);
+  scene.add(gltf.scene);
+  //gltf.animations; //could be added here???
+},
+ undefined,
+  function ( error ) { console.error( error ); } ); //if error loading the rock
+
+ 
 // Add a light source to the scene
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(5, 5, 5).normalize();
