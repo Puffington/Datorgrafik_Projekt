@@ -32,14 +32,25 @@ const cube1 = new THREE.Mesh(geometry1, material1);
 cube1.position.set(-5, 0, 0);
 scene.add(cube1);
 
-
 //trying to load a rock <- theo
 
 function load(path, n, pos){
   var rocks = [];
-  for (let i = 0; i < n; i++) {
-    rocks.push(new THREE.Object3D());
-  }
+  rocks.push(new THREE.Object3D());
+  const loader = new GLTFLoader(); 
+    loader.load( path, function ( gltf ) { 
+    var rock = gltf.scene
+    rock.position.set(pos[0],pos[1],pos[2]);
+    pos[0]++
+    pos[1]--
+    pos[2]++
+    rock.scale.set(1,1,1);
+    scene.add(gltf.scene);
+    //gltf.animations; //could be added here???
+  },
+   undefined,
+    function ( error ) { console.error( error ); } ); //if error loading the rock
+/* 
 
   rocks.forEach(rock => {
     const loader = new GLTFLoader(); 
@@ -55,12 +66,12 @@ function load(path, n, pos){
   },
    undefined,
     function ( error ) { console.error( error ); } ); //if error loading the rock
-  });
-
+  });*/
 }
 
-const tree = '/addons/tree2/maple_tree/scene.gltf';
-var test = load(tree, 6, [0,1,-3]);
+//const tree = '/addons/tree2/maple_tree/scene.gltf';
+const garden = "/addons/garden/garden.glb"
+var test = load(garden, 1, [0,-3,-3]);
 
 // Add a light source to the scene
 const light = new THREE.DirectionalLight(0xffffff, 1);
