@@ -1,5 +1,5 @@
 // Import the necessary Three.js components
-import * as THREE from '/node_modules/three/build/three.module.js';
+import * as THREE from 'three';
 
 // to be able to load a sspecific type of object, you have to import a loader
 import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
